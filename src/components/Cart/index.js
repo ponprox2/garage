@@ -16,6 +16,7 @@ import ProductInCart from "./ProductInCart";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { createCartAPI } from "../../services/index";
+
 import formatMoneyWithDot from "../../constants/until";
 // import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 // import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -46,9 +47,6 @@ export default function Cart() {
   const checkLogin = () => {
     const token = localStorage.getItem("token");
     if (!token) {
-      // setContentToast("bạn cần login để sử dụng tính năng này");
-      // setSeverity("error");
-      // setOpenToast(true);
       navigate("/login");
     }
   };
@@ -81,7 +79,11 @@ export default function Cart() {
       totalPrice: totalPrice,
       products: products,
       services: services,
+<<<<<<< HEAD
+      cartId: "106",
+=======
       cartId: "1116",
+>>>>>>> a46e74c41812244dd42ff59553de90903734d684
     };
     console.log(body);
 
